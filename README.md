@@ -24,4 +24,4 @@ The project presents website with the random joke generator in the idea of dad j
 ### How to Start
 
 This project is being deployed on GitHup Pages.
-Here is the link! [Dad Jokes Website!](https://magaliepie.github.io/dad-jokes/)
+Here is the link! [Jokes generator website!](https://magaliepie.github.io/joke-generator//)
