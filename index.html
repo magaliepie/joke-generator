@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random joke generator</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body class="light">
+
+  <div class="loader ">
+    <img src='images/spinner.gif' alt="Loading...">
+  </div>
+
+  <nav class='navbar'>
+    <ul class="navbar-nav">
+      <li class="has-dropdown">
+        <a href="#">Theme</a>
+        <ul class="dropdown">
+          <li class="dropdown-item">
+            <a href="#" id="light">light</a>
+          </li>
+          <li class="dropdown-item">
+            <a href="#" id="dark">dark</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>Joke generator</h1>
+  </header>
+
+  <main>
+    <div class="wrapper">
+      <h3>Random joke generator</h3>
+      <div id="jokeOutput" class="jokeOutput">
+      </div>
+      <button id="getJoke" class="btn">Get Another Joke</button>
+    </div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

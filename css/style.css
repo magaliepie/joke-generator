@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
+}
+
+a {
+    color: currentColor;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+}
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loader.hideLoader {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.navbar {
+    height: 70px;
+    width: 100%;
+    background: var(--bg-nav);
+}
+
+.navbar-nav {
+    height: 100%;
+    padding-right: 300px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+header {
+    height: 200px;
+    padding: 1em;
+    margin-bottom: 100px;
+    text-align: center;
+    -webkit-clip-path: polygon(0 0, 51% 100%, 100% 0);
+    clip-path: polygon(0 0, 51% 100%, 100% 0);
+    background: var(--bg-nav);
+}
+
+.dropdown {
+    width: 250px;
+    height: 3rem;
+    margin-top: 2rem;
+    padding: 0.5rem;
+    position: absolute;
+    opacity: 0;
+    z-index: 2;
+    background: var(--bg-dropdown);
+    border-top: 2px solid var(--border-color);
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-shadow: rgba(2, 8, 20, 0.1) 0 0.175em 0.5em;
+    box-shadow: rgba(2, 8, 20, 0.1) 0 0.175em 0.5em;
+    -webkit-transform: translateX(-40%);
+    transform: translateX(-40%);
+    -webkit-transition: opacity 0.15s ease-out;
+    transition: opacity 0.15s ease-out;
+}
+
+.has-dropdown:focus-within .dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dropdown-item a {
+    width: 100%;
+    height: 100%;
+    size: 0.7rem;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.dropdown-item a::before {
+    content: '';
+    width: 2rem;
+    height: 2rem;
+    margin-right: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 700px;
+    max-width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--bg-wrapper);
+    position: absolute;
+}
+
+.jokeOutput {
+    max-width: 550px;
+    margin: 20px auto;
+    font-size: 30px;
+}
+
+.btn {
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    color: #fff;
+    background-color: #63408b;
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1),
+        0 6px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
+
+.btn:active {
+    -webkit-transform: scale(0.98);
+    transform: scale(0.98);
+}
+
+:root {
+    --gray0: #f8f8f8;
+    --gray1: #ffffff;
+    --gray2: #aab4c0;
+    --gray3: #6c7983;
+    --gray4: #2a2e35;
+    --gray5: #4a4d52;
+    --gray6: #12181b;
+    --blue: #0084a5;
+    --purple: #a82dd1;
+}
+
+.light {
+    --bg: var(--gray0);
+    --bg-nav: linear-gradient(to right, var(--gray1), var(--gray3));
+    --bg-dropdown: var(--gray0);
+    --text: var(--gray5);
+    --border-color: var(--blue);
+    --bg-wrapper: var(--gray2);
+}
+
+.dark {
+    --bg: var(--gray4);
+    --bg-nav: linear-gradient(to right, var(--gray4), var(--gray6));
+    --bg-dropdown: var(--gray6);
+    --text: var(--gray0);
+    --border-color: var(--purple);
+    --bg-wrapper: var(--gray5);
+}
+/*# sourceMappingURL=style.css.map */
